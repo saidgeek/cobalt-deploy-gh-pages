@@ -1,0 +1,14 @@
+
+name: "Cobalt deploy gh-pages"
+author: "saidgeek"
+description: "Github action to deploy static page generated with cobalt into gh-pages branch on Github"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+inputs:
+  githubToken:
+    description: "Personal Access Token with permission to the repository"
+    required: true
+
