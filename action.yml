@@ -11,4 +11,13 @@ inputs:
   githubToken:
     description: "Personal Access Token with permission to the repository"
     required: true
-
+  repo:
+    description: "Repository to push building page"
+    required: false
+  branch:
+    description: "Branch to push building page"
+    required: false
+    default: "gh-pages"
+  cname:
+    description: "Registry dns name to page"
+    required: false

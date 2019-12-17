@@ -1,7 +1,8 @@
-FROM rust:alpine
+FROM lehmannka/cobalt.rs
 
-RUN curl -LSfs https://japaric.github.io/trust/install.sh | sh -s -- --git cobalt-org/cobalt.rs --crate cobalt
-
+RUN apt update && apt install -y git
 COPY ./entrypoint.sh /entrypoint.sh
+
+WORKDIR /src/
 
 ENTRYPOINT [ "/entrypoint.sh" ]
