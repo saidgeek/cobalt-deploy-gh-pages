@@ -3,6 +3,10 @@ name: "Cobalt deploy gh-pages"
 author: "saidgeek"
 description: "Github action to deploy static page generated with cobalt into gh-pages branch on Github"
 
+branding:
+  icon: "upload-cloud"
+  color: "green"
+
 runs:
   using: "docker"
   image: "Dockerfile"

@@ -1,6 +1,10 @@
 FROM lehmannka/cobalt.rs
 
-RUN apt update && apt install -y git
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update \
+    && apt-get install -yqq   \
+      apt-utils \
+      git
 COPY ./entrypoint.sh /entrypoint.sh
 
 WORKDIR /src/
