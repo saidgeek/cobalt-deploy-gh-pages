@@ -14,5 +14,7 @@ Registry dns name to GithubPage. By default is assigned by Github.
 
 ## Example
 ```yaml
-
+uses: saidgeek/cobalt-deploy-gh-pages
+with:
+  githubToken: ${{ secrets.GITHUBTOKEN }}
 ```
